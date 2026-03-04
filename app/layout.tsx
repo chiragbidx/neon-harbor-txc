@@ -1,6 +1,9 @@
 import "./globals.css";
-import RouteGuard from "@/components/auth/RouteGuard";
-import { Toaster } from "react-hot-toast";
+
+export const metadata = {
+  title: "Garden Shed Rentals",
+  description: "Rent garden sheds easily—flexible options for your storage needs. Professional setup and removal. Get your free quote quickly."
+};
 
 export default function RootLayout({
   children,
@@ -9,11 +12,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <RouteGuard>
-          {children}
-        </RouteGuard>
-        <Toaster position="top-center" />
+      <body style={{ margin: 0, fontFamily: "system-ui,sans-serif", background: "#fafcfb" }}>
+        {children}
       </body>
     </html>
   );
